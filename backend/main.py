@@ -17,6 +17,8 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from typing import Optional, List
 from datetime import datetime, timedelta
+import json
+from google.oauth2 import service_account
 
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph
@@ -246,8 +248,20 @@ def delete_notice(notice_id: int, db: Session = Depends(get_db), current_user: U
 @app.post("/translate_text")
 async def do_translate(request: TranslationRequest, current_user: User = Depends(get_current_user)):
     try:
-        translate_client = translate.Client()
+        # Get the JSON credentials string from the environment variable
+        creds_json_str = os.getenv('GOOGLE_CREDENTIALS_JSON')
+        if not creds_json_str:
+            raise ValueError("GOOGLE_CREDENTIALS_JSON environment variable not set.")
+
+        # Load the string into a Python dictionary
+        credentials_info = json.loads(creds_json_str)
         
+        # Create credentials from the dictionary
+        credentials = service_account.Credentials.from_service_account_info(credentials_info)
+        
+        # Initialize your Google client with the credentials
+        translate_client = translate.Client(credentials=credentials)
+
         # 1. Split the original text into paragraphs
         original_paragraphs = request.text.split('\n\n')
         translated_paragraphs = []
