@@ -8,3 +8,13 @@ Flask
 Flask-Cors
 gunicorn
 psycopg2-binary
+python-dotenv
+pydantic
+sqlalchemy
+alembic
+fastapi-sqlalchemy
+fastapi-utils
+fastapi-pagination
+fastapi-security
+fastapi-mail
+fastapi-logger          
