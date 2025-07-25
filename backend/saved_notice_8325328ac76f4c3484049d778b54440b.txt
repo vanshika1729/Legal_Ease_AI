@@ -1,0 +1,57 @@
+Type: rent
+Name: Meet Anand
+Recipient: Vanshika
+
+This is a formal legal notice addressing a rent increment without prior notice. Please remember to fill in all the bracketed information `[ ]` with your specific details. It is highly recommended to consult with a legal professional to ensure this notice complies with the specific landlord-tenant laws in your jurisdiction and the terms of your lease agreement.
+
+---
+
+**[Your Full Name]**
+**[Your Full Address]**
+**[Your City, Postal Code]**
+**[Your Phone Number]**
+**[Your Email Address]**
+
+**[Date]**
+
+**[Recipient's Full Name (Vanshika)]**
+**[Recipient's Full Address]**
+**[Recipient's City, Postal Code]**
+**[Recipient's Phone Number (if known)]**
+**[Recipient's Email Address (if known)]**
+
+---
+
+**SUBJECT: FORMAL NOTICE REGARDING UNILATERAL RENT INCREMENT FOR PROPERTY AT [PROPERTY ADDRESS]**
+
+Dear Ms. Vanshika,
+
+This formal notice is issued concerning a recent adjustment to the rent payable for the property located at **[Full Address of Rented Property, including Unit/Apartment Number if applicable]**, which I currently occupy as a tenant under a Lease Agreement dated **[Date of Lease Agreement]**.
+
+Under the terms of the aforementioned Lease Agreement, the agreed-upon monthly rent for the said property is **[Original Monthly Rent Amount in Numbers and Words, e.g., $1,500.00 - One Thousand Five Hundred US Dollars]**.
+
+It has come to my attention that the rent demanded or billed for the month of **[Month when the Increased Rent was Demanded/Billed, e.g., October 2023]** has been increased to **[New Monthly Rent Amount in Numbers and Words, e.g., $1,700.00 - One Thousand Seven Hundred US Dollars]**.
+
+I wish to respectfully remind you that our Lease Agreement, and generally accepted landlord-tenant practices as well as relevant statutory provisions in most jurisdictions, require landlords to provide a specific period of written notice (typically 30, 60, or 90 days, depending on the jurisdiction and lease terms) before implementing any changes to the rental amount. My review of our Lease Agreement does not indicate any clause permitting such an immediate or unnotified rent increase. Furthermore, I have not received any prior written communication from you outlining an intent to increase the rent, or specifying the new amount and its effective date.
+
+Therefore, I formally request that you:
+
+1.  **Revert the rent amount** for the month of **[Month when the Increased Rent was Demanded/Billed]** and all subsequent months back to the originally agreed-upon sum of **[Original Monthly Rent Amount]**, as per our existing Lease Agreement.
+2.  Alternatively, if a rent increase is indeed intended, that you **provide proper written notice** in accordance with our Lease Agreement and the relevant landlord-tenant laws governing our tenancy, clearly stating the new rent amount, the valid reason for the increase (if required by law), and its lawful effective date.
+
+I kindly request a written response to this notice by **[Date – allow 7-14 days from the date you send this notice, e.g., October 20, 2023]**, confirming your action to address this matter.
+
+Please be advised that failure to address this matter appropriately within the stipulated timeframe may leave me with no option but to explore all available legal remedies to protect my rights as a tenant, including but not limited to, disputing the increased portion of the rent, seeking mediation, or pursuing legal action.
+
+I trust we can resolve this matter amicably and in accordance with the terms of our agreement and applicable law.
+
+Sincerely,
+
+**[Your Signature]**
+
+**Meet Anand**
+Tenant
+
+---
+
+**Disclaimer:** This template is for informational purposes only and does not constitute legal advice. It is highly recommended to consult with a legal professional to ensure compliance with local landlord-tenant laws and the specific terms of your lease agreement before taking any action based on this notice. Laws regarding rent increases and notice periods vary significantly by jurisdiction.

@@ -1,0 +1,6 @@
+node_modules
+.env
+venv/
+__pycache__/
+#google cloud credentials
+backend/eminent-crane-465120-g3-4f5836b2274c.json
