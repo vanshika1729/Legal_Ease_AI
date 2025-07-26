@@ -104,7 +104,7 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
 app = FastAPI()
 
 origins = [
-    "https://legal-ease-ai-eight.vercel.app/",
+    "https://legal-ease-ai-eight.vercel.app",
 ]
 
 app.add_middleware(
