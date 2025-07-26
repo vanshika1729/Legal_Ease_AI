@@ -119,7 +119,8 @@ To get a local copy up and running, follow these simple steps.
 
 ---
 
-## 🖼️ Screenshots
+##<img width="2559" height="1479" alt="image" src="https://github.com/user-attachments/assets/3b82df86-f66b-4c2e-8008-a16a7515052d" />
+
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/vanshika1729/Legal_Ease_AI/main/frontend/src/assets/screenshot.png" alt="Application Screenshot" width="80%">
