@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {API_BASE_URL} from '@env'; // Adjust the import based on your project structure
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -11,8 +12,7 @@ const Register = () => {
     e.preventDefault();
     setMsg('');
     try {
-      const BASE_URL = import.meta.env.VITE_API_BASE_URL; 
-      const res = await fetch(`${BASE_URL}/register`, {
+      const res = await fetch(`${API_BASE_URL}/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
