@@ -105,7 +105,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000", 
-    "https://legal-ease-2lin98vdu-vanshikas-projects-446f4f4.vercel.app",
+    "https://legal-ease-ai-eight.vercel.app",
 ]
 
 app.add_middleware(
