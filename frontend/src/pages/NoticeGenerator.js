@@ -46,7 +46,7 @@ const NoticeGenerator = () => {
       type = 'other';
     }
     try {
-      const res = await fetch(`${BASE_URL}/generatenotice `, {
+      const res = await fetch(`${BASE_URL}/generate_notice `, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
