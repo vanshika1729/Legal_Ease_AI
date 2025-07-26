@@ -108,7 +108,7 @@ select:focus {
 
 @keyframes textFocus {
   from {
-    filter: blur(10px);
+    filter: blur(7px);
     opacity: 0;
   }
   to {
@@ -334,7 +334,7 @@ select:focus {
   cursor: not-allowed;
 }
 
-/* --- Small Spinner for Buttons --- */
+
 .spinner-small {
   width: 16px;
   height: 16px;
@@ -370,7 +370,7 @@ select:focus {
   gap: 0.5rem; 
 }
 
-/* Renamed to be more specific */
+
 .view-btn {
   background: linear-gradient(145deg, #c5b358, #a08c4a);
   border: none;
@@ -397,7 +397,7 @@ select:focus {
   align-items: center;
   justify-content: center;
   padding: 8px 12px;
-  font-size: 1rem; /* Slightly smaller icon */
+  font-size: 1rem;
   transition: background-color 0.2s ease;
 }
 
@@ -436,7 +436,7 @@ select:focus {
   .nav-links { text-align: center; padding: 1.5rem; width: 100%; display: block; font-size: 2rem; }
   .nav-links:hover { color: #c5b358; border-bottom: none; transform: scale(1.1); }
   
-  /* STYLING THE MOBILE BUTTON CORRECTLY */
+  /* STYLING THE MOBILE BUTTON */
   .nav-links-mobile {
     display: block;
     text-align: center;
@@ -487,7 +487,6 @@ select:focus {
   }
 
 
-  /* HIDING THE DESKTOP BUTTON ON MOBILE */
   .navbar-container .btn--outline {
     display: none;
   }
@@ -501,7 +500,7 @@ select:focus {
   justify-content: center;
   align-items: center;
   margin-top: 4rem;
-  border-top: 1px solid #444; /* This line creates the horizontal rule */
+  border-top: 1px solid #444; 
 }
 
 .footer-content {
@@ -524,37 +523,31 @@ select:focus {
   display: block;
 }
 
-/* In App.css, replace the existing rule with this one */
 
 .saved-notices {
-  /* --- Adjust these values to your liking --- */
   width: 80%;
-  max-width: 1200px; /* Increased max-width for a larger panel */
-  padding: 2rem;    /* More internal spacing */
+  max-width: 1200px; 
+  padding: 2rem;    
   background-color:linear-gradient(145deg, #c5b358, #a08c4a);
   align-items: center;
   transition: background-color 0.3s ease, transform 0.2s ease;
   border-left: 4px solid #c5b358;
 
-  margin: 2rem auto; /* This keeps the panel centered on the page */
+  margin: 2rem auto; 
   border-radius: 10px;
-  box-sizing: border-box; /* Ensures padding is included in the width */
+  box-sizing: border-box; 
 }
 
-/*
- * Ensures the list of notices fills the width of the new, larger container.
- */
+
 .saved-notices ul {
   width: 100%;
-  padding: 0; /* Resets default list padding */
-  margin: 0 0 2rem 0; /* Adds space below the list before the viewer */
+  padding: 0; 
+  margin: 0 0 2rem 0; 
 }
 
-/*
- * Ensures the content viewer box also fills the width.
- */
+
 .saved-notices .notice-content-box {
   width: 100%;
-  box-sizing: border-box; /* Ensures padding is included in the width */
+  box-sizing: border-box; 
 }
 

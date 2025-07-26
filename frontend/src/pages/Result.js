@@ -21,12 +21,12 @@ const Result = () => {
 
   const handleTranslate = async () => {
     if (language === 'hi' && translatedNotice) {
-      // No need to re-translate if we already have it
+      
       return;
     }
     setIsTranslating(true);
     try {
-      // This is a placeholder for your actual translation API endpoint
+
       const res = await fetch('http://127.0.0.1:8000/translate_text', {
         method: 'POST',
         headers: {
@@ -39,13 +39,13 @@ const Result = () => {
       if (!res.ok) throw new Error('Translation failed');
 
       const data = await res.json();
-      // Assuming the API returns a 'translated_text' field
+      
       setTranslatedNotice(data.translated_text || 'Translation result would appear here.');
-      setLanguage('hi'); // Switch language after successful translation
+      setLanguage('hi'); 
       toast.success('Translated to Hindi!');
     } catch (err) {
       toast.error('Failed to translate.');
-      // In a real app, you might get a mock translation for development
+      
       setTranslatedNotice(`[Hindi Translation of: "${editedNotice}"]`);
       setLanguage('hi');
     } finally {
@@ -61,7 +61,7 @@ const Result = () => {
     }
   };
 
-  const handleEdit = (e) => setEditedNotice(e.target.value);
+  //const handleEdit = (e) => setEditedNotice(e.target.value);
 
   const handleSave = async () => {
     // setSaveMsg('');
@@ -80,9 +80,9 @@ const Result = () => {
       });
       await res.json();
       if (!res.ok) throw new Error("Failed to save.");
-      toast.success('Notice saved successfully!'); // Success toast
+      toast.success('Notice saved successfully!'); 
     } catch (err) {
-      toast.error('Failed to save notice.'); // Error toast
+      toast.error('Failed to save notice.'); 
     }
   };
 

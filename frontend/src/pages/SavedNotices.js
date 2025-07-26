@@ -101,7 +101,7 @@ const SavedNotices = () => {
 };
 
   const handleDelete = async (noticeId) => {
-    // Confirm with the user before deleting
+    
     if (!window.confirm("Are you sure you want to delete this notice?")) {
       return;
     }
@@ -118,10 +118,10 @@ const SavedNotices = () => {
         throw new Error('Failed to delete notice.');
       }
 
-      // Remove the notice from the local state to update the UI instantly
+      
       setNotices(currentNotices => currentNotices.filter(n => n.id !== noticeId));
       
-      // If the deleted notice was being viewed, close the content pane
+      
       if (selectedNotice && selectedNotice.id === noticeId) {
         setSelectedNotice(null);
         //setNoticeContent('');
@@ -135,10 +135,6 @@ const SavedNotices = () => {
 
   const handleDownload = async (noticeToDownload) => {
   setDownloadingId(noticeToDownload.id);
-
-  // Determine which content to download
-  // If the notice being downloaded is the one being viewed AND the language is set to Hindi, use the translated content.
-  // Otherwise, default to the original English content.
   const contentToDownload = 
     (selectedNotice && selectedNotice.id === noticeToDownload.id && language === 'hi')
       ? noticeToDownload.translated_content

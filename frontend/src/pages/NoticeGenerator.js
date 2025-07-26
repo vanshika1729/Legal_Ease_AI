@@ -65,7 +65,6 @@ const NoticeGenerator = () => {
     }
   };
 
-  // In NoticeGenerator.js, replace your entire return statement
 
   return (
     <div className="notice-generator">
@@ -73,13 +72,12 @@ const NoticeGenerator = () => {
       <form onSubmit={handleSubmit}>
         <AnimatePresence mode="wait">
           {step === 1 && (
-            // This parent container orchestrates the animation of its children
             <motion.div
               key="step1"
               variants={{
                 visible: {
                   transition: {
-                    staggerChildren: 0.1, // Adds a 0.1s delay between each child animating in
+                    staggerChildren: 0.1,
                   },
                 },
               }}
@@ -87,7 +85,7 @@ const NoticeGenerator = () => {
               animate="visible"
               exit="exit"
             >
-              {/* Each child element is now a motion component with its own variant */}
+        
               <motion.label variants={stepVariants}>
                 Select Notice Type:
               </motion.label>
@@ -129,7 +127,7 @@ const NoticeGenerator = () => {
             >
               <motion.label variants={stepVariants}>Enter Details:</motion.label>
               
-              {/* Fix 1: Added type="text" to the input field */}
+              
               <motion.input 
                 type="text" 
                 name="name" 
@@ -162,7 +160,7 @@ const NoticeGenerator = () => {
               )}
           
               <div style={{display: 'flex', gap: '1rem'}}>
-                {/* Fix 2: Replaced inline style with a className */}
+                
                 <motion.button 
                   type="button" 
                   onClick={handleBack} 
@@ -172,8 +170,7 @@ const NoticeGenerator = () => {
                 >
                   Back
                 </motion.button>
-                
-                {/* Fix 3: Ensured the correct className is present */}
+               
                 <motion.button 
                   type="submit" 
                   disabled={isGenerating} 

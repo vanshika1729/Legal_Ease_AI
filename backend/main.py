@@ -1,4 +1,3 @@
-
 import os
 from dotenv import load_dotenv
 import google.generativeai as genai
@@ -222,14 +221,12 @@ def get_notice(id: int, current_user: User = Depends(get_current_user), db: Sess
     return notice
 
 
-# In main.py
 
 @app.delete("/delete_notice/{notice_id}", status_code=status.HTTP_200_OK)
 def delete_notice(notice_id: int, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
-    """
-    Deletes a notice by its ID for the currently authenticated user.
-    """
-    # Use 'Notice' directly instead of 'models.Notice'
+
+    #Deletes a notice by its ID for the currently authenticated user.
+
     notice_to_delete = db.query(Notice).filter(
         Notice.id == notice_id,
         Notice.owner_id == current_user.id
@@ -259,10 +256,10 @@ async def do_translate(request: TranslationRequest, current_user: User = Depends
         # Create credentials from the dictionary
         credentials = service_account.Credentials.from_service_account_info(credentials_info)
         
-        # Initialize your Google client with the credentials
+        # Initialize Google client with the credentials
         translate_client = translate.Client(credentials=credentials)
 
-        # 1. Split the original text into paragraphs
+        
         original_paragraphs = request.text.split('\n\n')
         translated_paragraphs = []
 
@@ -275,7 +272,6 @@ async def do_translate(request: TranslationRequest, current_user: User = Depends
                 )
                 translated_paragraphs.append(result['translatedText'])
 
-        # 3. Join the translated paragraphs back together
         final_translated_text = '\n\n'.join(translated_paragraphs)
 
         return {"translated_text": final_translated_text}
@@ -302,33 +298,24 @@ async def do_translate(request: TranslationRequest, current_user: User = Depends
 
 @app.post("/export_pdf")
 async def export_pdf(notice: str = Body(..., embed=True)):
-    """
-    Generates a PDF from the given notice text.
-    This function handles both English and Hindi text correctly.
-    """
     pdf_filename = f"notice_{uuid4().hex}.pdf"
-    
-    # 1. Set up styles and use the universal font
+
     styles = getSampleStyleSheet()
     custom_style = ParagraphStyle(
         name='CustomStyle',
         parent=styles['Normal'],
-        fontName='NotoSansDevanagari',  # This font works for both languages
+        fontName='NotoSansDevanagari',  
         fontSize=11,
-        leading=14  # Adjusts line spacing
+        leading=14  
     )
 
     try:
-        # 2. Use the Paragraph object to handle text wrapping automatically
-        # It correctly processes Unicode characters and line breaks
         text_with_breaks = notice.replace('\n', '<br/>')
         p = Paragraph(text_with_breaks, custom_style)
 
-        # 3. Build the PDF document
         doc = SimpleDocTemplate(pdf_filename, pagesize=letter)
         doc.build([p])
         
-        # 4. Return the generated PDF file
         return FileResponse(pdf_filename, media_type='application/pdf', filename="LegalNotice.pdf")
         
     except Exception as e:

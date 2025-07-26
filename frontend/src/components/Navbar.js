@@ -53,7 +53,6 @@ const Navbar = ({ token, onLogout }) => {
             </li>
           )}
         </ul>
-        {/* --- DESKTOP BUTTONS RESTORED --- */}
         <div className='navbar-auth-buttons'>
           {!token ? (
             <>
