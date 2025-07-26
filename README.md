@@ -1,6 +1,5 @@
 <div align="center">
-  <img width="389" height="422" alt="image-removebg-preview" src="https://github.com/user-attachments/assets/c4cdfee8-f68e-4d04-a8d9-d4323ce132f1" alt="Logo" width="120" height="120" />
-   
+  <img width="389" height="422" alt="image-removebg-preview" src="https://github.com/user-attachments/assets/c4cdfee8-f68e-4d04-a8d9-d4323ce132f1" alt="Logo" />
   <h1 align="center">LegalEase AI ⚖️</h1>
   <p align="center">
     AI-powered legal notice generation, translation, and management.
@@ -120,10 +119,10 @@ To get a local copy up and running, follow these simple steps.
 
 ---
 
-
+## 🖼️ Screenshots
 
 <p align="center">
-  #<img width="2559" height="1479" alt="image" src="https://github.com/user-attachments/assets/3b82df86-f66b-4c2e-8008-a16a7515052d" />
+ <img width="90%" alt="Application Screenshot" src="https://github.com/user-attachments/assets/3b82df86-f66b-4c2e-8008-a16a7515052d" />
 </p>
 
 ---
