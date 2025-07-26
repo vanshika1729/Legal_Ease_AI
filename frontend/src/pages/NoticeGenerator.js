@@ -33,6 +33,8 @@ const NoticeGenerator = () => {
   const handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
   const handleCustomIssueChange = (e) => setCustomIssue(e.target.value);
 
+   const BASE_URL = 'https://legal-ease-ai-backend.onrender.com'; 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsGenerating(true);
@@ -43,7 +45,7 @@ const NoticeGenerator = () => {
       type = 'other';
     }
     try {
-      const res = await fetch('http://127.0.0.1:8000/generate_notice', {
+      const res = await fetch(`${BASE_URL}/generatenotice `, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

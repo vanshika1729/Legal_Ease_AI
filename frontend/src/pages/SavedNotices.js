@@ -15,6 +15,8 @@ const SavedNotices = () => {
   const [downloadingId, setDownloadingId] = useState(null);
   const navigate = useNavigate();
 
+   const BASE_URL = 'https://legal-ease-ai-backend.onrender.com'; 
+
   
 
   //useEffect(() => {
@@ -52,7 +54,7 @@ const SavedNotices = () => {
   const fetchNotices = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch('http://127.0.0.1:8000/list_notices', {
+      const res = await fetch(`${BASE_URL}/list_notices`, {
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('token'),
         },
@@ -107,7 +109,7 @@ const SavedNotices = () => {
     }
 
     try {
-      const res = await fetch(`http://127.0.0.1:8000/delete_notice/${noticeId}`, {
+      const res = await fetch(`${BASE_URL}/delete_notice/${noticeId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('token'),
@@ -144,7 +146,7 @@ const SavedNotices = () => {
     (selectedNotice && selectedNotice.id === noticeToDownload.id && language === 'hi') ? 'hi' : 'en';
 
   try {
-    const res = await fetch('http://127.0.0.1:8000/export_pdf', {
+    const res = await fetch(`${BASE_URL}/export_pdf`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

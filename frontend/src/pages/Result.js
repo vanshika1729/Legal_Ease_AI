@@ -14,6 +14,8 @@ const Result = () => {
   const [translatedNotice, setTranslatedNotice] = useState('');
   const [isTranslating, setIsTranslating] = useState(false);
 
+   const BASE_URL = 'https://legal-ease-ai-backend.onrender.com'; 
+
   useEffect(() => {
     if (!localStorage.getItem('token')) navigate('/login');
   }, [navigate]);
@@ -27,7 +29,7 @@ const Result = () => {
     setIsTranslating(true);
     try {
 
-      const res = await fetch('http://127.0.0.1:8000/translate_text', {
+      const res = await fetch(`${BASE_URL}/translate_text`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -66,7 +68,7 @@ const Result = () => {
   const handleSave = async () => {
     // setSaveMsg('');
     try {
-      const res = await fetch('http://127.0.0.1:8000/save_notice', {
+      const res = await fetch(`${BASE_URL}/save_notice`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -91,7 +93,7 @@ const Result = () => {
     setDownloading(true);
     const contentToDownload = language === 'en' ? editedNotice : translatedNotice;
     try {
-      const res = await fetch('http://127.0.0.1:8000/export_pdf', {
+      const res = await fetch(`${BASE_URL}/export_pdf`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
