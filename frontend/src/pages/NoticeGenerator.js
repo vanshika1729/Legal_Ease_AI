@@ -22,6 +22,7 @@ const NoticeGenerator = () => {
   const [customIssue, setCustomIssue] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
   const navigate = useNavigate();
+  const BASE_URL = 'https://legal-ease-ai-backend.onrender.com'; 
 
   useEffect(() => {
     if (!localStorage.getItem('token')) navigate('/login');
@@ -33,7 +34,7 @@ const NoticeGenerator = () => {
   const handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
   const handleCustomIssueChange = (e) => setCustomIssue(e.target.value);
 
-   const BASE_URL = 'https://legal-ease-ai-backend.onrender.com'; 
+   
 
   const handleSubmit = async (e) => {
     e.preventDefault();
