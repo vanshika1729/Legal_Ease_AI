@@ -8,7 +8,7 @@
     <a href="#about-the-project"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://legal-ease-ai.vercel.app/">View Demo</a>
+    <a href="https://legal-ease-ai-eight.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/vanshika1729/Legal_Ease_AI/issues">Report Bug</a>
     ·
