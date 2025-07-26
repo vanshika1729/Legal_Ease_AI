@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="500" height="500" alt="image-removebg-preview" src="https://github.com/user-attachments/assets/3cba70e8-bbfd-4bbf-9952-2efe984a66f2" alt="Logo" width="120" height="120"/>
+  <img width="389" height="422" alt="image-removebg-preview" src="https://github.com/user-attachments/assets/c4cdfee8-f68e-4d04-a8d9-d4323ce132f1" alt="Logo" width="120" height="120" />
    
   <h1 align="center">LegalEase AI ⚖️</h1>
   <p align="center">
