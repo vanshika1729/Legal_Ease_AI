@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {API_BASE_URL} from '@env'; // Adjust the import based on your project structure
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -12,7 +11,7 @@ const Register = () => {
     e.preventDefault();
     setMsg('');
     try {
-      const res = await fetch(`${API_BASE_URL}/register`, {
+      const res = await fetch('http://127.0.0.1:8000/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
