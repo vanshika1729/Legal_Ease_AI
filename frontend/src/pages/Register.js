@@ -7,11 +7,13 @@ const Register = () => {
   const [msg, setMsg] = useState('');
   const navigate = useNavigate();
 
+  const BASE_URL = 'https://legal-ease-ai-backend.onrender.com';
+
   const handleRegister = async (e) => {
     e.preventDefault();
     setMsg('');
     try {
-      const res = await fetch('http://127.0.0.1:8000/register', {
+      const res = await fetch(`${BASE_URL}/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),

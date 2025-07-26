@@ -8,11 +8,12 @@ const Login = ({ onLogin }) => {
   const [msg, setMsg] = useState('');
   const navigate = useNavigate();
 
+  const BASE_URL = 'https://legal-ease-ai-backend.onrender.com'; 
+
   const handleLogin = async (e) => {
     e.preventDefault();
     setMsg('');
     try {
-      const BASE_URL = import.meta.env.VITE_API_BASE_URL;
       const res = await fetch(`${BASE_URL}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

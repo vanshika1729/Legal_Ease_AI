@@ -104,7 +104,7 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
 app = FastAPI()
 
 origins = [
-    "http://localhost:3000",
+    "https://your-vercel-frontend-url.vercel.app",
 ]
 
 app.add_middleware(
